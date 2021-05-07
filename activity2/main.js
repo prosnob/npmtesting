@@ -9,22 +9,18 @@
 
 // 3 -Require thie package in your main.js
 const axios = require("axios");
+const chalk = require("chalk");
 // 4- Send a get request to this endpoint : 'https://random-words-api.vercel.app/word'
 //		and print the result of the request in the console
 let url = "https://random-words-api.vercel.app/word";
 axios.get(url).then((response) => {
-    console.log(response.data);
+    console.log(chalk.red(response.data));
   });
 
 // 5 - Install NPM chalk package 
 // 		 Change the display in the console as you want using chalk 
 //		 https://www.npmjs.com/package/chalk
 
-const chalk = require("chalk");
-let URL = "https://www.npmjs.com/package/chalk";
-axios.get(URL).then((response) => {
-    console.log(chalk.blue(response.data));
-  });
 
 // 7 Run it : it should work
 
